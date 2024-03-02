@@ -1,3 +1,7 @@
+"""
+Circle class
+"""
+
 import pygame
 from position import Position
 from shapes.shape import Shape

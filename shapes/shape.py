@@ -1,3 +1,7 @@
+"""
+Abstract shape class
+"""
+
 from abc import abstractmethod
 from position import Position
 

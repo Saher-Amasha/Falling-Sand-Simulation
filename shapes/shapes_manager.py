@@ -1,5 +1,9 @@
+"""
+Manage and store all shapes
+"""
+
 from position import Position
-from shapes.rectangle import Rectangle
+from shapes.rectangle import Square
 from shapes.circle import Circle
 
 
@@ -23,15 +27,13 @@ class ShapesManager:
         self.shapes_counter += 1
         return shape_id
 
-    def add_square(
-        self, position: Position, color: str, height: int = 8, width: int = 8
-    ):
+    def add_square(self, position: Position, color: str, height: int = 8):
         """
         Add a square to shapes dict
         """
         shape_id = self.shapes_counter
-        self.shapes[self.shapes_counter] = Rectangle(
-            shape_id, position=position, color=color, height=height, width=width
+        self.shapes[self.shapes_counter] = Square(
+            shape_id, position=position, color=color, height=height
         )
         self.shapes_counter += 1
         return shape_id

@@ -1,3 +1,7 @@
+"""
+Houses all positions of all objects in game
+"""
+
 from position import Position
 
 

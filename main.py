@@ -1,3 +1,7 @@
+"""
+Main entry point
+"""
+
 from game import Game
 
 WIDTH = 200

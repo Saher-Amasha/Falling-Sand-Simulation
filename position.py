@@ -1,3 +1,7 @@
+"""
+Position class contains x y
+"""
+
 from dataclasses import dataclass
 
 
