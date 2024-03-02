@@ -13,10 +13,10 @@ class Rectangle(Shape):
     """
 
     def __init__(
-        self, shape_id, position: Position, color: str, height: int = 4, width: int = 4
+        self, shape_id, position: Position, color: str, height: int = 4
     ) -> None:
         super().__init__(shape_id, position, color)
-        self.width = width
+        self.width = height
         self.height = height
 
     def draw(self, window):
