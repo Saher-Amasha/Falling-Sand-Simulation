@@ -1,3 +1,7 @@
+"""
+Manage and store all shapes
+"""
+
 from position import Position
 from shapes.rectangle import Rectangle
 from shapes.circle import Circle

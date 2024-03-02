@@ -1,3 +1,7 @@
+"""
+Responsble for manging the game components handels the shapes and the grid
+"""
+
 import random
 import pygame
 from grid import Grid
