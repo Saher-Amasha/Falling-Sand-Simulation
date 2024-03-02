@@ -1,5 +1,5 @@
 """
-Rectangle class
+Square class
 """
 
 import pygame
@@ -7,9 +7,9 @@ from position import Position
 from shapes.shape import Shape
 
 
-class Rectangle(Shape):
+class Square(Shape):
     """
-    Rectangle class
+    Square class
     """
 
     def __init__(
@@ -21,7 +21,7 @@ class Rectangle(Shape):
 
     def draw(self, window):
         """
-        Draws rectangle
+        Draws Square
         """
         return pygame.draw.rect(
             window,
