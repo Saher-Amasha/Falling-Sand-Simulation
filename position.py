@@ -11,3 +11,6 @@ class Position:
     def to_grid_pos(self,shape_width):
         "converts posittion from pixel coordinates to frid coordinates"""
         return Position(int(self.x/shape_width),int(self.y/shape_width))
+
+    def __str__(self) -> str:
+        return f"X:{self.x},Y:{self.y}"

@@ -11,9 +11,9 @@ class Game:
     def __init__(self,height:int,width:int,caption:str = "Falling Sand") -> None:
         pygame.init()
         self.shape_width = 8
-        self.pixel_height = height*self.shape_width
-        self.pixel_width = width*self.shape_width
-        self.window  = pygame.display.set_mode((self.pixel_width, self.pixel_height))
+        pixel_height = height*self.shape_width
+        pixel_width = width*self.shape_width
+        self.window  = pygame.display.set_mode((pixel_width, pixel_height))
         pygame.display.set_caption(caption)
 
         self.height = height
@@ -52,7 +52,8 @@ class Game:
         Add circle shape at pos  
         """
         if self.grid.get_at_pos(position) == -1:
-            self.grid.set_at_pos(position=position,val=self.shapes_manage.add_circle(position,color))
+            self.grid.set_at_pos(position=position,
+                                 val=self.shapes_manage.add_circle(position,color))
 
     def add_square(self,position:Position,color):
         """
@@ -70,7 +71,7 @@ class Game:
                 self.grid.set_at_pos(Position(*below),current_val)
                 self.grid.set_at_pos(Position(*current),-1)
                 return
-            
+
             botom_right = (x+1,y+1)
             if x <self.width -1 and self.grid.get_at_pos(Position(*botom_right))== -1:
                 self.shapes_manage.shapes[current_val].position= Position(*botom_right)
@@ -114,7 +115,7 @@ class Game:
                     pressed_event = event
                 elif event.type == pygame.MOUSEBUTTONUP:
                     pressed = False
-                    pressed_event=None  
+                    pressed_event=None
                 elif event.type == pygame.QUIT:
                     run =False
             if pressed:
