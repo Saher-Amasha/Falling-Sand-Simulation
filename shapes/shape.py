@@ -3,11 +3,16 @@ from position import Position
 
 
 class Shape:
-    def __init__(self,id,position:Position,color:str) -> None:
-        self.id=id
+    """
+    Abstract shape class
+    """
+    def __init__(self,shape_id,position:Position,color:str) -> None:
+        self.shape_id=shape_id
         self.position=position
         self.color=color
-    
+
     @abstractmethod
-    def draw(self):
-        pass
+    def draw(self,window):
+        """
+        Abstract Draw method
+        """
