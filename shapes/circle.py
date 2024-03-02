@@ -16,3 +16,6 @@ class Circle(Shape):
                                   self.color,
                                   (self.position.x*8,self.position.y*8),
                                   self.radius)
+
+    def __str__(self) -> str:
+        return super().__str__() + f'radius{self.radius}'

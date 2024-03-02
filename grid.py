@@ -2,6 +2,9 @@ from position import Position
 
 
 class Grid:
+    """
+    Houses all positions of all objects in game
+    """
     def __init__(self,height:int,width:int) -> None:
         self.height = height
         self.width = width

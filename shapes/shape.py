@@ -16,3 +16,6 @@ class Shape:
         """
         Abstract Draw method
         """
+
+    def __str__(self) -> str:
+        return str(self.position)
